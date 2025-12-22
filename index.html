@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugla Smart Route Navigator</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mugla Smart Route Navigator</h1>
+        
+        <div class="toolbar">
+            <label for="algorithm">Algorithm:</label>
+            <select id="algorithm">
+                <option value="dijkstra">Dijkstra</option>
+                <option value="astar">A* (A-Star)</option>
+            </select>
+            <button onclick="toggleAddMode()" id="addModeBtn" class="secondary-btn">Add New Location</button>
+            <button onclick="resetSelection()" class="reset-btn">Reset</button>
+        </div>
+
+        <div id="status">Please select a Start Point (A)</div>
+
+        <div id="stats" style="display:none; margin-top:10px; padding:10px; background:#e2e6ea; border-radius:5px;">
+            <span id="stats-text"></span>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="dijkstra.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
