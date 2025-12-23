@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#sidebar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 320px;
+    max-height: 90vh;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.controls {
+    margin-bottom: 15px;
+}
+
+.btn-clear {
+    width: 100%;
+    padding: 12px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-clear:hover { background: #c82333; }
+
+#instructions {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+ul { padding-left: 20px; margin: 0; }
+li { margin-bottom: 5px; }
+
+.stats-container {
+    background: #e7f5ff;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.stat-item:last-child { margin-bottom: 0; }
+.stat-label { font-size: 0.9rem; color: #004085; font-weight: 600; }
+.stat-value { font-size: 1.2rem; font-weight: bold; color: #0056b3; }
+
+#steps-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+#steps-container h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+#steps-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+#steps-list li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 4px;
+}
+
+.leaflet-routing-container { display: none; }
